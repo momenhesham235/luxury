@@ -629,7 +629,7 @@ ul {
   .mobile_nav {
     /* display: block; */
     position: fixed;
-    top: 580px;
+    top: 90%;
     left: 10%;
     width: 80%;
     height: 50px;
