@@ -181,6 +181,10 @@ ul {
       }
     }
   }
+
+  .mobile_nav {
+    display: none;
+  }
 }
 
 .hero_section {
@@ -589,6 +593,7 @@ ul {
 }
 
 /* header media */
+
 @media (max-width: 768px) {
   .header {
     width: 40%;
@@ -596,6 +601,35 @@ ul {
     left: 30%;
     .header_nav {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    .mobile_nav {
+      /* display: block; */
+      position: absolute;
+      top: 600px;
+      left: -15%;
+      width: 300px;
+      height: 30px;
+      padding: 10px 10px;
+      line-height: 1.5;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      color: var(--current-text-color);
+      font-size: 10px;
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      background-color: var(--current-bg-color);
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
     }
   }
 }
