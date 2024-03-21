@@ -140,6 +140,10 @@ ul {
         right: -20px;
         border-right: 3px solid #0fa3b1;
         transform: rotate(30deg);
+
+        @media (max-width: 1024px) {
+          right: -12px;
+        }
       }
     }
 
@@ -223,6 +227,10 @@ ul {
       position: absolute;
       top: 200px;
       font-size: 25px;
+
+      @media (max-width: 1024px) {
+        position: static;
+      }
 
       span:first-child {
         color: #0fa3b1;
@@ -720,5 +728,12 @@ ul {
 }
 
 /* contact section */
+@media (max-width: 768px) {
+  .contact_section_wrapper {
+    .contact_section_row {
+      flex-direction: column;
+    }
+  }
+}
 
 /* footer */
