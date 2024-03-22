@@ -51,8 +51,6 @@ function toggleMode() {
 
 applyMode();
 
-
-
 // form validation
 const nameEl = document.getElementById("name");
 const emailEl = document.getElementById("email");
@@ -199,6 +197,8 @@ const showSuccess = (input) => {
  * @throws {Error} If the form is not found.
  * */
 form.addEventListener("submit", function (e) {
+  const successMessage = document.getElementById("success_msg");
+
   // prevent the form from submitting
   e.preventDefault();
 
@@ -211,6 +211,10 @@ form.addEventListener("submit", function (e) {
 
   // submit to the server if the form is valid
   if (isFormValid) {
+    successMessage.style.display = "block";
+    setTimeout(function () {
+      successMessage.style.display = "none";
+    }, 3000);
   }
 });
 
