@@ -437,36 +437,57 @@
             </div>
 
             <div class="contact_section_form">
-              <form action="" method="post">
+              <form action="" method="post" id="contact-form">
                 <div>
                   <div>
-                    <label> name</label>
+                    <label for="name"> name</label>
                   </div>
                   <div class="contact_section_form_input">
-                    <input type="text" placeholder="Name" />
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      id="name"
+                      name="name"
+                      autocomplete="off"
+                    />
+                    <small></small>
                   </div>
                 </div>
 
                 <div>
                   <div>
-                    <label> email </label>
+                    <label for="email"> email </label>
                   </div>
                   <div class="contact_section_form_input">
-                    <input type="email" placeholder="email" />
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      id="email"
+                      name="email"
+                      autocomplete="off"
+                    />
+                    <small></small>
                   </div>
                 </div>
 
                 <div>
                   <div>
-                    <label>Drop us a line</label>
+                    <label for="message">Drop us a line</label>
                   </div>
                   <div class="contact_section_form_input">
-                    <textarea rows="6" placeholder="Your Message..."></textarea>
+                    <textarea
+                      rows="6"
+                      placeholder="Your Message..."
+                      id="message"
+                      name="message"
+                      autocomplete="off"
+                    ></textarea>
+                    <small></small>
                   </div>
                 </div>
 
                 <div class="form_btn">
-                  <button>Send it!</button>
+                  <button type="submit">Send it!</button>
                 </div>
               </form>
             </div>

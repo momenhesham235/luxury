@@ -20,7 +20,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: var(--current-bg-color);
   color: var(--current-text-color);
   transition: background-image 0.3s, background-color 0.3s, color 0.3s;
@@ -36,6 +36,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 main {
@@ -444,13 +445,20 @@ ul {
             .contact_section_form_input {
               flex: 1;
               margin-left: 10px;
+              display: flex;
+              flex-direction: column;
+              small {
+                font-size: 14px;
+                margin-top: 5px;
+                color: red;
+              }
               input {
                 flex: 1;
                 padding: 10px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 font-size: 16px;
-                color: var(--current-text-color);
+                color: #000;
               }
 
               textarea {
@@ -459,7 +467,7 @@ ul {
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 font-size: 16px;
-                color: var(--current-text-color);
+                color: #000;
                 resize: none;
               }
             }
