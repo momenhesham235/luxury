@@ -56,6 +56,7 @@ const nameEl = document.getElementById("name");
 const emailEl = document.getElementById("email");
 const messageEl = document.getElementById("message");
 const form = document.getElementById("contact-form");
+const successMessage = document.getElementById("success_msg");
 
 /**
  * Validates the name input field.
@@ -197,8 +198,6 @@ const showSuccess = (input) => {
  * @throws {Error} If the form is not found.
  * */
 form.addEventListener("submit", function (e) {
-  const successMessage = document.getElementById("success_msg");
-
   // prevent the form from submitting
   e.preventDefault();
 
@@ -262,3 +261,8 @@ form.addEventListener(
     }
   })
 );
+
+const closeBtn = document.getElementById("close_btn");
+closeBtn.addEventListener("click", () => {
+  successMessage.style.display = "none";
+});

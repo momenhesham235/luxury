@@ -1,3 +1,4 @@
+
 /* Global styles */
 /* Default light mode */
 :root {
@@ -506,6 +507,22 @@ ul {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+  .success_msg_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .close_btn {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      i {
+        background-color: #0fa3b1;
+        color: var(--current-bg-color);
+        padding: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 .footer {
