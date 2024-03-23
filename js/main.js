@@ -57,6 +57,7 @@ const emailEl = document.getElementById("email");
 const messageEl = document.getElementById("message");
 const form = document.getElementById("contact-form");
 const successMessage = document.getElementById("success_msg");
+const progress = document.getElementById("progress");
 
 /**
  * Validates the name input field.
@@ -211,9 +212,10 @@ form.addEventListener("submit", function (e) {
   // submit to the server if the form is valid
   if (isFormValid) {
     successMessage.style.display = "block";
+    animateProgress();
     setTimeout(function () {
       successMessage.style.display = "none";
-    }, 3000);
+    }, 5000);
   }
 });
 
@@ -266,3 +268,19 @@ const closeBtn = document.getElementById("close_btn");
 closeBtn.addEventListener("click", () => {
   successMessage.style.display = "none";
 });
+
+function animateProgress() {
+  var width = 100;
+  var interval = setInterval(frame, 50); // Adjust the animation speed by changing the interval value
+
+  function frame() {
+    if (width <= 0) {
+      clearInterval(interval);
+    } else {
+      width--;
+      progress.style.width = width + "%"; // Corrected this line
+    }
+  }
+}
+
+animateProgress();
