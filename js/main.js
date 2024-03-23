@@ -278,9 +278,8 @@ function animateProgress() {
       clearInterval(interval);
     } else {
       width--;
-      progress.style.width = width + "%"; // Corrected this line
+      progress.style.width = width + "%";
     }
   }
 }
 
-animateProgress();
