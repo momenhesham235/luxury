@@ -269,7 +269,7 @@ const closeBtn = document.getElementById("close_btn");
 
 closeBtn.addEventListener("click", () => {
   successMessage.style.display = "none";
-  console.log(interval);
+  // console.log(interval);
   if (interval) {
     clearInterval(interval);
   }
