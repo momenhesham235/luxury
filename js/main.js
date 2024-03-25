@@ -215,7 +215,7 @@ form.addEventListener("submit", function (e) {
     animateProgress();
     setTimeout(function () {
       successMessage.style.display = "none";
-    }, 5000);
+    }, 3000);
   }
 });
 
@@ -264,14 +264,20 @@ form.addEventListener(
   })
 );
 
+let interval;
 const closeBtn = document.getElementById("close_btn");
+
 closeBtn.addEventListener("click", () => {
   successMessage.style.display = "none";
+  console.log(interval);
+  if (interval) {
+    clearInterval(interval);
+  }
 });
 
 function animateProgress() {
-  var width = 100;
-  var interval = setInterval(frame, 50); // Adjust the animation speed by changing the interval value
+  let width = 100;
+  interval = setInterval(frame, 30); // Adjust the animation speed by changing the interval value
 
   function frame() {
     if (width <= 0) {
@@ -282,4 +288,3 @@ function animateProgress() {
     }
   }
 }
-
