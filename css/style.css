@@ -209,7 +209,7 @@ ul {
   transition: background-color 0.3s, color 0.3s;
 
   .hero_section_content {
-    width: 50%;
+    width: 35%;
     position: relative;
 
     .hero_section_heading {
@@ -226,7 +226,7 @@ ul {
 
     .hero_section_text {
       position: absolute;
-      top: 200px;
+      top: 150px;
       font-size: 25px;
 
       @media (max-width: 1024px) {
@@ -293,60 +293,68 @@ ul {
         }
       }
 
-      .car_section_text {
-        .car_section_brand {
-          display: block;
-          font-size: 20px;
-          font-weight: bold;
-          margin: 10px 0;
-          color: var(--current-text-color);
+      .car_section_text_wrapper {
+        padding: 15px 0;
+        .car_section_text {
+          padding: 10px 0;
+          .car_section_brand {
+            display: block;
+            font-size: 15px;
+            font-family: cursive;
+            letter-spacing: 1px;
+            margin: 10px 0;
+            color: var(--current-text-color);
+          }
+
+          h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 10px 0;
+            color: var(--current-text-color);
+          }
+
+          .car_section_price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0fa3b1;
+          }
         }
 
-        h3 {
-          font-size: 22px;
-          font-weight: bold;
-          margin: 10px 0;
-          color: var(--current-text-color);
+        .price_legal {
+          color: #6a6d71;
+        }
+        .car_section_highlights {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 10px 0;
+          gap: 10px;
+          .highlight {
+            background-color: #6a6d71;
+            width: fit-content;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: var(--current-text-color);
+          }
+          .highlight__label {
+            font-weight: normal;
+          }
         }
 
-        .car_section_price {
-          font-size: 18px;
-          color: #0fa3b1;
-        }
-      }
-
-      .car_section_highlights {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 10px 0;
-        gap: 10px;
-        .highlight {
-          background-color: #6a6d71;
-          width: fit-content;
-          padding: 2px 5px;
-          border-radius: 10px;
-          font-size: 16px;
-          font-weight: 200;
-          margin-bottom: 10px;
-          color: var(--current-text-color);
-        }
-        .highlight__label {
-          font-weight: bold;
-        }
-      }
-
-      .car_section_button {
-        button {
-          width: fit-content;
-          padding: 10px;
-          border: none;
-          border-radius: 5px;
-          background-color: #0fa3b1;
-          color: var(--current-bg-color);
-          font-size: 16px;
-          font-weight: bold;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          cursor: pointer;
+        .car_section_button {
+          padding: 10px 0;
+          button {
+            width: fit-content;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0fa3b1;
+            color: var(--current-bg-color);
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+          }
         }
       }
     }
@@ -415,6 +423,7 @@ ul {
     }
     .contact_section_row {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       padding: 20px;
       gap: 20px;
@@ -432,26 +441,26 @@ ul {
         form {
           display: flex;
           flex-direction: column;
-          div {
+          .form_group {
             display: flex;
+            align-items: center;
             margin-bottom: 20px;
-            label {
-              font-size: 16px;
-              font-weight: bold;
-              margin-bottom: 10px;
-              color: #0fa3b1;
-              text-transform: capitalize;
-            }
-            .contact_section_form_input {
+            .contact_section_form_label {
               flex: 1;
+              label {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #0fa3b1;
+                text-transform: capitalize;
+              }
+            }
+
+            .contact_section_form_input {
+              flex: 6;
               margin-left: 10px;
               display: flex;
               flex-direction: column;
-              small {
-                font-size: 14px;
-                margin-top: 5px;
-                color: red;
-              }
               input {
                 flex: 1;
                 padding: 10px;
@@ -460,7 +469,6 @@ ul {
                 font-size: 16px;
                 color: #000;
               }
-
               textarea {
                 flex: 1;
                 padding: 10px;
@@ -469,6 +477,11 @@ ul {
                 font-size: 16px;
                 color: #000;
                 resize: none;
+              }
+              small {
+                font-size: 14px;
+                margin-top: 5px;
+                color: red;
               }
             }
           }
