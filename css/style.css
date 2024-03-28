@@ -613,7 +613,7 @@ ul {
       flex: 1;
       background-color: #0fa3b1;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px #0fa3b1;
       padding: 30px 10px;
       color: var(--current-text-color);
 
@@ -645,7 +645,7 @@ ul {
   .footer_copyright {
     background-color: #0fa3b1;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px #0fa3b1;
     padding: 20px;
     text-align: center;
     color: var(--current-bg-color);
